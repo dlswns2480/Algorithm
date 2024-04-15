@@ -11,7 +11,7 @@ public class Main {
         int y = in.nextInt();
         prevPercent = (int) ((long) y * 100 / x);
         int lt = 1;
-        int rt = (int) 1e9;
+        int rt = x;
         int answer = -1;
         while(lt <= rt){
             int mid = (lt + rt) / 2;
