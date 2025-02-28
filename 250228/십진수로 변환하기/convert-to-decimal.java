@@ -12,8 +12,10 @@ public class Main {
 
         int idx = arr.length;
         int num = 0;
+        int j = 0;
         for(int i = idx - 1; i >= 0; i--) {
-            num += (arr[i] * Math.pow(2, i));
+            num += (arr[j] * Math.pow(2, i));
+            j++;
         }
 
         System.out.print(num);
