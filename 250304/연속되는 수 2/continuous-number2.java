@@ -18,7 +18,7 @@ public class Main {
             }
             cnt++;
         }
-
+        max = Math.max(cnt, max);
         System.out.print(max);
         // Please write your code here.
     }
