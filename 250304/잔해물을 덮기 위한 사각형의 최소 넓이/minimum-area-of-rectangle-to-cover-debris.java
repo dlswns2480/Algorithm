@@ -41,14 +41,12 @@ public class Main {
                 }
             }
         }
+        int width = 0;
         if(cnt == 0) {
-            System.out.print(0);
-            return;
+            width = 0;
+        } else {
+            width = (bigY - smally) * (bigx - smallx);
         }
-
-
-        int width = (bigY - smally) * (bigx - smallx);
         System.out.print(width);
-        // Please write your code here.
     }
 }
