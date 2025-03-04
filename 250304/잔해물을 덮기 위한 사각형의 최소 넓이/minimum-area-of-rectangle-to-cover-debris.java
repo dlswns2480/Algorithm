@@ -13,14 +13,14 @@ public class Main {
         int rect2_x2 = sc.nextInt()+ 1000;
         int rect2_y2 = sc.nextInt()+ 1000;
 
-        for(int i = rect1_y1; i <= rect1_y2; i++) {
-            for(int j = rect1_x1; j <= rect1_x2; j++) {
+        for(int i = rect1_y1; i < rect1_y2; i++) {
+            for(int j = rect1_x1; j < rect1_x2; j++) {
                 arr[i][j] = 1;
             }   
         }
 
-        for(int i = rect2_y1; i <= rect2_y2; i++) {
-            for(int j = rect2_x1; j <= rect2_x2; j++) {
+        for(int i = rect2_y1; i < rect2_y2; i++) {
+            for(int j = rect2_x1; j < rect2_x2; j++) {
                 arr[i][j] = 2;
             }
         }
@@ -34,6 +34,7 @@ public class Main {
             for(int j = 0; j < 2001; j++) {
                 if(arr[i][j] == 1) {
                     cnt++;
+                    // System.out.println("x index : " + j + " y index : " + i);
                     bigx = Math.max(bigx, j);
                     bigY = Math.max(bigY, i);
                     smallx = Math.min(smallx, j);
@@ -42,10 +43,11 @@ public class Main {
             }
         }
         int width = 0;
+        // System.out.println(cnt);
         if(cnt == 0) {
             width = 0;
         } else {
-            width = (bigY - smally) * (bigx - smallx);
+            width = (bigY - smally + 1) * (bigx - smallx + 1);
         }
         System.out.print(width);
     }
