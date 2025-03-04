@@ -8,14 +8,20 @@ public class Main {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-        int cnt = 0;
-        for(int i = 0; i < n; i++) {
-            if(i == 0 || arr[i] != arr[i - 1]) {
-                cnt++;
+        int max = Integer.MIN_VALUE;
+        int num = arr[0];
+        int cnt = 1;
+        for(int i = 1; i < n; i++) {
+            if(arr[i] != num) {
+                max = Math.max(max, cnt);
+                cnt = 1;
+                num = arr[i];
+                continue;
             }
+            cnt++;
         }
 
-        System.out.print(cnt);
+        System.out.print(max);
         // Please write your code here.
     }
 }
