@@ -9,11 +9,11 @@ public class Main {
             arr[i] = sc.nextInt();
         }
         int max = Integer.MIN_VALUE;
-        int cnt = 1;
+        int cnt = 0;
         for(int i = 0; i < n; i++) {
             if(i == 0 || arr[i] != arr[i - 1]) {
-                max = Math.max(max, cnt);
-                cnt = 1;
+                max = Math.max(max, ++cnt);
+                cnt = 0;
                 continue;
             }
             cnt++;
