@@ -12,6 +12,7 @@ public class Main {
             for(int j = y[i]; j < y[i] + 8; j++) {
                 for(int k = x[i]; k < x[i] + 8; k++) {
                     String key = String.valueOf(j) + String.valueOf(k);
+                    if(map.getOrDefault(key, 0) == 1) continue;
                     map.put(key, 1);
                 }
             }
