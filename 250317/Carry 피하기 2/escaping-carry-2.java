@@ -18,9 +18,9 @@ public class Main {
                         int third = arr[k];
                         int sum = first + sec + third;
                         if(first % 10 + sec % 10 + third % 10 >= 10) carry = true;
-                        if(first % 100 + sec % 100 + third % 100 >= 100) carry = true;
-                        if(first % 1000 + sec % 1000 + third % 1000 >= 1000) carry = true;
-                        if(first % 10000 + sec % 10000 + third % 10000 >= 10000) carry = true;
+                        if(first % 100 / 10 + sec % 100 / 10 + third % 100 / 10 >= 10) carry = true;
+                        if(first % 1000 / 100 + sec % 1000 / 100 + third % 1000 / 100 >= 10) carry = true;
+                        if(first % 10000 / 1000 + sec % 10000 /1000 + third % 10000 / 1000 >= 10) carry = true;
                         if(!carry) answer = Math.max(answer, sum);
                     }
                 }
