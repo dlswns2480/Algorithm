@@ -15,10 +15,14 @@ public class Main {
         for(int i = 0; i < n; i++) {
             for(int j = 0; j < n; j++) {
                 if(i == j) continue;
+                int first = arr[i];
+                int sec = arr[j];
                 arr[i] = 0;
                 arr[j] = 0;
                 int sum = getSum(arr);
                 min = Math.min(min, Math.abs(s - sum));
+                arr[i] = first;
+                arr[j] = sec;
             }
         }
 
