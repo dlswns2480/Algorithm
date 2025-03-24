@@ -30,6 +30,7 @@ public class Main {
 
         for(int j = 0; j < n; j++) {
             int cnt = 1;
+            int maxCnt = 1;
             for(int i = 1; i < n; i++) {
                 if(grid[i][j] == grid[i - 1][j]) {
                     cnt++;
