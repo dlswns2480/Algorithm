@@ -21,11 +21,8 @@ public class Main {
                     cnt = 1;
                 }
                 maxCnt = Math.max(maxCnt, cnt);
-                if(maxCnt >= m) {
-                    answer++;
-                    break;
-                }
             }
+            if(maxCnt >= m) answer++;
         }
 
         for(int j = 0; j < n; j++) {
@@ -38,11 +35,8 @@ public class Main {
                     cnt = 1;
                 }
                 maxCnt = Math.max(maxCnt, cnt);
-                if(maxCnt >= m) {
-                    answer++;
-                    break;
-                }
             }
+            if(maxCnt >= m) answer++;
         }
         System.out.print(answer);
             
