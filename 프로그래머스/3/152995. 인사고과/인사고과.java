@@ -25,7 +25,7 @@ class Solution {
         
         List<Info> infos = new ArrayList<>();
         
-        for (int i = 1; i < scores.length; i++) {
+        for (int i = 0; i < scores.length; i++) {
             infos.add(new Info(scores[i][0], scores[i][1]));
         }
         
@@ -37,7 +37,7 @@ class Solution {
         for (int i = 0; i < infos.size(); i++) {
             Info curr = infos.get(i);
             if (curr.eval < maxEval) {
-                
+                if(curr.attitude == wanAttitude && curr.eval == wanEval) return -1;
             } else {
                 valid.add(curr);
                 maxEval = Math.max(maxEval, curr.eval);
@@ -47,7 +47,6 @@ class Solution {
         int peopleCount = 0;
         for (int i = 0; i < valid.size(); i++) {
             Info info = valid.get(i);
-            if (info.attitude > wanAttitude && info.eval > wanEval) return - 1;
             if (info.attitude < wanAttitude && info.eval < wanEval) continue;
             
             int otherSum = info.getSum();
